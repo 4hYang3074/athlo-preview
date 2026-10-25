@@ -291,14 +291,14 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <a href="#glance"><span>01</span>At a glance / 一页看懂</a>
   <a href="#overview"><span>02</span>Overview / 系统总览</a>
   <a href="#roles"><span>03</span>Roles / 角色</a>
-  <a href="#pages"><span>04</span>Page map / 页面地图</a>
-  <a href="#register"><span>05</span>Courses / 浏览与报名课程</a>
-  <a href="#pricing"><span>06</span>Packages &amp; payment / 套票与收款</a>
-  <a href="#checkin"><span>07</span>Check-in / 上课签到</a>
-  <a href="#credits"><span>08</span>Credits &amp; reminders / 课时与提醒</a>
-  <a href="#data"><span>09</span>Data &amp; privacy / 资料与权限</a>
-  <a href="#costs"><span>10</span>Costs / 上线与每月费用</a>
-  <a href="#admin"><span>11</span>Admin &amp; website / 平台管理与网站内容</a>
+  <a href="#admin"><span>04</span>Admin &amp; website / 平台管理与网站内容</a>
+  <a href="#pages"><span>05</span>Page map / 页面地图</a>
+  <a href="#register"><span>06</span>Courses / 浏览与报名课程</a>
+  <a href="#pricing"><span>07</span>Packages &amp; payment / 套票与收款</a>
+  <a href="#checkin"><span>08</span>Check-in / 上课签到</a>
+  <a href="#credits"><span>09</span>Credits &amp; reminders / 课时与提醒</a>
+  <a href="#data"><span>10</span>Data &amp; privacy / 资料与权限</a>
+  <a href="#costs"><span>11</span>Costs / 上线与每月费用</a>
   <a href="#ui"><span>12</span>UI &amp; UX / 界面与交互展示</a>
   <a href="#phases"><span>13</span>Phases / 开发阶段</a>
   <a href="#phase2"><span>14</span>Phase 2 explained / 第二阶段说明</a>
@@ -320,7 +320,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>Account 帐号</td><td>一个帐号；家长帐号下可以有多个孩子</td><td>学员多为未成年人，由家长操作，课时按孩子分开</td></tr>
     <tr><td>Courses 课程</td><td>每门课属于一位教练，由教练自己管理课程、学员和套票</td><td>Phase 1 先服务个人教练</td></tr>
     <tr><td>Joining 加入</td><td>报名课程时自动成为该教练的学员</td><td>报名后就能上课，步骤最少</td></tr>
-    <tr><td>Payment 收款</td><td>支付网关（FPX / 卡 / 电子钱包）付款成功 → 课时自动入帐；平台统一收款或支付公司自动分帐，<a class="xref" href="#q01">待确认 #01</a></td><td>见 <a class="xref" href="#pay-modes">第 06 章 · 收款方式</a>三种收款方式</td></tr>
+    <tr><td>Payment 收款</td><td>支付网关（FPX / 卡 / 电子钱包）付款成功 → 课时自动入帐；平台统一收款或支付公司自动分帐，<a class="xref" href="#q01">待确认 #01</a></td><td>见 <a class="xref" href="#pay-modes">第 07 章 · 收款方式</a>三种收款方式</td></tr>
     <tr><td>Pricing 价格</td><td>教练的套票 + Promo code</td><td>开学优惠、推广活动</td></tr>
     <tr><td>Check-in 签到</td><td>两种方式：学员扫教练一键产生的签到码；教练在名单上手动签到。临时来上课的学员可以直接加入名单</td><td>有手机的扫码最快；没手机或临时来的由教练处理</td></tr>
     <tr><td>Class size 人数上限</td><td>每堂课设定人数上限，课程页和签到画面都显示“已报名 / 上限”</td><td>家长报名前就知道还有没有名额</td></tr>
@@ -425,8 +425,28 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
 </section>
 
 <!-- 04 -->
+<section class="ch" id="admin">
+  <div class="ch-head"><div class="eyebrow">Section 04 / Admin &amp; website</div><h2>Admin and website content<small>平台管理与网站内容</small></h2></div>
+  <p class="prose">平台管理员不用改代码就能维护网站和所有课程。每一项修改都会写进操作记录（Audit log），查得到谁在什么时候改了什么。</p>
+  <div class="tbl"><table>
+    <tr><th>管理员可以改</th><th>内容</th><th>说明</th></tr>
+    <tr><td>首页广告</td><td>上传一张或多张横幅；首页每 2 秒自动轮播</td><td>可一次选多张或直接拖进来；按住卡片拖拽排序；删除；改完按“保存”才生效，“放弃更改”全部还原</td></tr>
+    <tr><td>关于我们 / 联系我们</td><td>中英文内容、Email、WhatsApp、营业时间</td><td>右边即时预览；营业时间用 4 个选单（开始 / 结束的日子与时间）</td></tr>
+    <tr><td>课程</td><td>查看、搜寻、新增、编辑、封存任何教练的课程与上课时间</td><td>以该教练的名义修改，规则与教练自己改时相同</td></tr>
+    <tr><td>教练资料</td><td>名字、介绍、照片、运动项目、Verified 标记</td><td>新教练的资格审核在“Coach review”</td></tr>
+    <tr><td>运动与地区</td><td>新增运动（中英文名称、封面）、显示 / 隐藏；新增、改名、删除地区</td><td>还有课程在用的运动或地区不能删除；地区改名会同步到所有课程</td></tr>
+    <tr><td>平台优惠码</td><td>% 或固定金额；所有教练或指定教练；有效期与使用上限</td><td>可一键产生代码；即时预览家长省多少；折扣由平台承担，教练按原价收入；可封存</td></tr>
+    <tr><td>支援信箱</td><td>家长、教练和网站访客的问题</td><td>“联系我们”的表单直接进这里</td></tr>
+  </table></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/banners.jpg" data-anim="ux/banners.webp" alt="UI · 首页广告管理" loading="lazy"><div class="shot-cap"><b>UI · 首页广告管理</b><span>一次上传 3 张（逐张亮起）→ 拖拽排序 → 删除（碎成沙子）→ 保存 → 首页轮播</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/site-text.jpg" data-anim="ux/site-text.webp" alt="UI · 联系我们与地区" loading="lazy"><div class="shot-cap"><b>UI · 联系我们与地区</b><span>修改介绍文字，右边即时预览 → 改营业时间 → 保存 → 新增地区</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-courses.jpg" data-anim="ux/admin-courses.webp" alt="UI · 课程管理与教练资料" loading="lazy"><div class="shot-cap"><b>UI · 课程管理与教练资料</b><span>搜寻课程 → 编辑 → 教练资料</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-promos.jpg" data-anim="ux/admin-promos.webp" alt="UI · 平台优惠码" loading="lazy"><div class="shot-cap"><b>UI · 平台优惠码</b><span>新增 → 产生代码（乱码解码）→ 改成固定金额，预览数字滚动 → 指定教练 → 保存</span></div></figure></div>
+</section>
+
+<!-- 05 -->
 <section class="ch" id="pages">
-  <div class="ch-head"><div class="eyebrow">Section 04 / Page map</div><h2>Page map<small>页面地图：每种身份的导航</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 05 / Page map</div><h2>Page map<small>页面地图：每种身份的导航</small></h2></div>
   <div class="navs" style="grid-template-columns:repeat(3,minmax(0,1fr))">
     <div class="nav"><div class="ws">Parent<small>学生 &amp; 家长 · 电脑侧边栏 / 手机底部 Tab</small></div><ol><li>Home<i>签到 · 通知 · 下一堂课 · 课时</i></li><li>Check-in<i>选孩子 · 扫码</i></li><li>Schedule<i>课表 · 出勤</i></li><li>Buy<i>套票 · 优惠码</i></li><li>Children<i>学生为 Family</i></li><li>Notifications</li><li>Receipts</li><li>Support</li><li>Settings</li></ol></div>
     <div class="nav"><div class="ws">Coach<small>平板 / 电脑</small></div><ol><li>Home<i>今日概况 · 开始签到</i></li><li>Schedule</li><li>Courses<i>介绍 · 名额</i></li><li>Check-in<i>签到码 · 点名</i></li><li>Packages</li><li>Promo codes</li><li>Payments<i>收款 · 结款</i></li><li>Students<i>课时</i></li><li>Reports</li><li>Settings</li></ol></div>
@@ -441,9 +461,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   </table></div>
 </section>
 
-<!-- 05 -->
+<!-- 06 -->
 <section class="ch" id="register">
-  <div class="ch-head"><div class="eyebrow">Section 05 / Courses</div><h2>Browsing and registering for courses<small>浏览与报名课程：报名即成为学员</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 06 / Courses</div><h2>Browsing and registering for courses<small>浏览与报名课程：报名即成为学员</small></h2></div>
   <p class="prose">在课程页看到喜欢的课，为孩子报名并付款，付款确认后孩子就出现在教练的名单上。之后每堂课签到即可。</p>
   <div class="steps" style="--n:5">
     <div class="step"><div class="n">1</div><div class="who">Anyone</div><h4>看课程</h4><p>不用登录就能看课程总览、每门课的介绍和剩余名额。</p></div>
@@ -485,9 +505,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="clips"><figure class="shot clip"><img src="ux/poster/courses.jpg" data-anim="ux/courses.webp" alt="UI · 课程总览与介绍（电脑）" loading="lazy"><div class="shot-cap"><b>UI · 课程总览与介绍（电脑）</b><span>按运动筛选 → 打开课程 → 介绍、学习内容、教练、人数上限、套票</span></div></figure><figure class="shot clip phone"><img src="ux/poster/enroll.jpg" data-anim="ux/enroll.webp" alt="UI · 手机报名" loading="lazy"><div class="shot-cap"><b>UI · 手机报名</b><span>课程介绍 → 选孩子 → 报名</span></div></figure></div>
 </section>
 
-<!-- 06 -->
+<!-- 07 -->
 <section class="ch" id="pricing">
-  <div class="ch-head"><div class="eyebrow">Section 06 / Packages</div><h2>Packages, promo codes and payment<small>套票、优惠码与收款</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 07 / Packages</div><h2>Packages, promo codes and payment<small>套票、优惠码与收款</small></h2></div>
   <h3 id="packages">Package visibility / 套票谁看得到</h3>
   <div class="stack">
     <div class="tier"><b>Public 公开</b><span>所有人都看得到，包括还没注册的人。例：Trial RM 30、4 堂 RM 160、12 堂 RM 480。</span><em>课程介绍页</em></div>
@@ -532,7 +552,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>2 · 只抽成 5%</td><td class="num">RM 800 − 16 − 40 = <b>RM 744</b></td><td class="num">RM 40</td><td class="num">RM 4,000 − 80 − 200 = <b>RM 3,720</b></td><td class="num">RM 200</td></tr>
     <tr><td>3 · 月费 + 抽成 2%</td><td class="num">RM 800 − 16 − 49 − 16 = <b>RM 719</b></td><td class="num">RM 65</td><td class="num">RM 4,000 − 80 − 99 − 80 = <b>RM 3,741</b></td><td class="num">RM 179</td></tr>
   </table></div>
-  <p class="prose" style="font-size:14px">算法：教练实收 = 月收 − 网关手续费 − 抽成 − 月费。网关手续费在例子里<b>假设为 2%</b>（Wei RM 16、Aiman RM 80），只为方便比较；实际费率要以签约的支付网关报价为准，FPX、卡和电子钱包的费率也不一样。5% 和 2% 的抽成同样只是讨论用的例子。平台收入还要扣掉平台自己的成本（主机、资料库等，见 <a class="xref" href="#cost-table">第 10 章 · 费用表</a>）。</p>
+  <p class="prose" style="font-size:14px">算法：教练实收 = 月收 − 网关手续费 − 抽成 − 月费。网关手续费在例子里<b>假设为 2%</b>（Wei RM 16、Aiman RM 80），只为方便比较；实际费率要以签约的支付网关报价为准，FPX、卡和电子钱包的费率也不一样。5% 和 2% 的抽成同样只是讨论用的例子。平台收入还要扣掉平台自己的成本（主机、资料库等，见 <a class="xref" href="#cost-table">第 11 章 · 费用表</a>）。</p>
   <div class="ex">
     <div class="exc"><div class="q">看例子的重点</div><h4>小教练和大教练的感受不同</h4><p>· 生意少的 Wei：只抽成（模式 2）对他最划算，因为没有固定月费。<br>· 生意多的 Aiman：只收月费（模式 1）对他最划算，平台收入则最少。<br>· 模式 3 介于两者之间：平台从小教练收得最多（RM 65），从大教练收 RM 179。</p></div>
     <div class="exc" style="border-color:var(--strong)"><div class="q">建议 Recommend</div><h4>Phase 1 先用模式 1（只收月费）</h4><p>教练最容易接受，系统也最简单。等教练数量和交易量变大，再评估是否加入较低的抽成（模式 3）。加入抽成时要改：Admin 设定抽成 %；结款金额 = 付款 − 抽成；教练的结款和报表要显示总额、抽成、实收。</p></div>
@@ -542,9 +562,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
 <div class="clips"><figure class="shot clip phone"><img src="ux/poster/buy.jpg" data-anim="ux/buy.webp" alt="UI · 购买套票（手机）" loading="lazy"><div class="shot-cap"><b>UI · 购买套票（手机）</b><span>选孩子 → 选套票 → 输入优惠码 → FPX 选银行 → 付款</span></div></figure></div>
 </section>
 
-<!-- 07 -->
+<!-- 08 -->
 <section class="ch" id="checkin">
-  <div class="ch-head"><div class="eyebrow">Section 07 / Check-in</div><h2>Check-in<small>上课签到（Phase 1 核心功能）</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 08 / Check-in</div><h2>Check-in<small>上课签到（Phase 1 核心功能）</small></h2></div>
   <p class="prose">每堂课有两种签到方式，教练可以同时使用。签到成功时同时扣 1 堂课，教练画面实时更新。</p>
   <div class="ex">
     <div class="exc"><div class="q">Method 1 · 扫码签到</div><h4>教练一键产生签到码，学员扫描</h4><p>教练在首页按“开始签到”（或签到页的 Generate QR code），屏幕立即出现签到 QR。家长先选这次为谁签到，再用手机相机扫描；学生直接为自己签到。QR 每 20 秒自动更换，截图转发给不在场的人会失效。</p></div>
@@ -581,7 +601,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
       <path d="M500 390 H834" class="lns" marker-end="url(#a2)"/><text x="560" y="382" font-size="13">⑥ 成功：剩余 11 堂</text>
       <path d="M500 430 H166" class="lns" marker-end="url(#a2)"/><text x="190" y="422" font-size="13">⑦ 教练名单立刻显示“已签到 / 迟到”</text>
     </svg>
-    <figcaption>Figure 7.1 · 方式 1 扫码签到的流程。方式 2 手动签到与 Walk-in 不需要扫码，由教练在名单上直接完成。记录出席和扣课是一起完成的，不会出现扣了课却没有记出席的情况。</figcaption>
+    <figcaption>Figure 8.1 · 方式 1 扫码签到的流程。方式 2 手动签到与 Walk-in 不需要扫码，由教练在名单上直接完成。记录出席和扣课是一起完成的，不会出现扣了课却没有记出席的情况。</figcaption>
   </figure>
   <div class="two">
     <div>
@@ -610,9 +630,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="clips"><figure class="shot clip"><img src="ux/poster/checkin.jpg" data-anim="ux/checkin.webp" alt="UI · 教练签到" loading="lazy"><div class="shot-cap"><b>UI · 教练签到</b><span>产生签到码 → 名单上按 Check in / Absent，人数即时更新 → Add walk-in 搜寻学员</span></div></figure><figure class="shot clip phone"><img src="ux/poster/scan.jpg" data-anim="ux/scan.webp" alt="UI · 家长扫码签到（手机）" loading="lazy"><div class="shot-cap"><b>UI · 家长扫码签到（手机）</b><span>先选这次为谁签到 → 扫码 → 有报名的人已自动勾好 → 签到完成</span></div></figure></div>
 </section>
 
-<!-- 08 -->
+<!-- 09 -->
 <section class="ch" id="credits">
-  <div class="ch-head"><div class="eyebrow">Section 08 / Lesson credits</div><h2>Lesson credits and reminders<small>课时规则与课时不足提醒</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 09 / Lesson credits</div><h2>Lesson credits and reminders<small>课时规则与课时不足提醒</small></h2></div>
   <p class="prose">剩余课数不是直接改一个数字，而是把每一次增加或扣除都记成一行，余额 = 所有记录相加。有疑问时查得到来源，也方便退课和对帐。</p>
   <div class="note"><b>到期：</b>每次购买的课时有自己的有效期，签到时先扣最早到期的那一批。到期未用完的课时以一行 “Expired” 扣除，教练可手动延期。</div>
 
@@ -626,7 +646,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>WhatsApp 自动发送</td><td>要（Meta WhatsApp Business Platform）</td><td>Meta 验证的商家帐号、专用号码、讯息模板审核</td><td>按讯息收费</td><td><span class="b p2">Phase 2</span></td></tr>
     <tr><td>SMS</td><td>要（SMS 服务商）</td><td>服务商帐号、寄件人名称</td><td>每则收费</td><td><span class="b p2">如需要</span></td></tr>
   </table></div>
-  <div class="note" id="email-quota"><b>Email 建议：</b>用 Resend 免费方案（每月 3,000 封，初期 100–200 位学员绰绰有余）加上自己的网域，例如 noreply@athlo.my：看起来正式、不容易进垃圾信箱，只需付网域年费（见 <a class="xref" href="#cost-table">第 10 章 · 费用表</a>）。不建议用个人 Gmail 发系统信。</div>
+  <div class="note" id="email-quota"><b>Email 建议：</b>用 Resend 免费方案（每月 3,000 封，初期 100–200 位学员绰绰有余）加上自己的网域，例如 noreply@athlo.my：看起来正式、不容易进垃圾信箱，只需付网域年费（见 <a class="xref" href="#cost-table">第 11 章 · 费用表</a>）。不建议用个人 Gmail 发系统信。</div>
   <div class="steps" style="--n:4">
     <div class="step"><div class="n">1</div><div class="who">Coach</div><h4>按 Notify all</h4><p>弹出视窗显示收件人与讯息内容，讯息自动带入孩子名字和剩余课数。</p></div>
     <div class="step"><div class="n">2</div><div class="who">System</div><h4>自动发送</h4><p>按“Send in-app &amp; email”，App 内通知和 email 一次送出。</p></div>
@@ -655,9 +675,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="clips"><figure class="shot clip"><img src="ux/poster/notify.jpg" data-anim="ux/notify.webp" alt="UI · 课时不足提醒与课时记录" loading="lazy"><div class="shot-cap"><b>UI · 课时不足提醒与课时记录</b><span>Notify all → 确认收件人与讯息 → 发送 → 打开学员的课时记录</span></div></figure></div>
 </section>
 
-<!-- 09 -->
+<!-- 10 -->
 <section class="ch" id="data">
-  <div class="ch-head"><div class="eyebrow">Section 09 / Data</div><h2>Data and privacy<small>资料与权限</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 10 / Data</div><h2>Data and privacy<small>资料与权限</small></h2></div>
   <figure class="fig">
     <svg viewBox="0 0 1000 360" role="img" aria-label="Three groups of information: people, coaching, and classes and payments">
       <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
@@ -681,7 +701,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
       <rect x="40" y="306" width="920" height="40" class="box2"/>
       <text x="500" y="331" font-size="13" text-anchor="middle" class="t2">每位教练的资料互相隔离：Aiman 只看得到自己的学员、课程和付款</text>
     </svg>
-    <figcaption>Figure 9.1 · 系统记录的资料分成三类：使用的人、教练的课程，以及上课和付款的记录。</figcaption>
+    <figcaption>Figure 10.1 · 系统记录的资料分成三类：使用的人、教练的课程，以及上课和付款的记录。</figcaption>
   </figure>
   <div class="tbl"><table>
     <tr><th>Data 资料</th><th>Owner 负责</th><th>Student / Parent</th><th>Coach</th><th>Platform</th></tr>
@@ -695,9 +715,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="note"><b>个人资料保护：</b>学员多为未成年人。注册时取得家长同意；IC 号码非必要不收集，收集时隐藏显示；照片使用需另外同意。需依马来西亚 PDPA 设定资料保留期限（<a class="xref" href="#q05">待确认 #05</a>）。</div>
 </section>
 
-<!-- 10 -->
+<!-- 11 -->
 <section class="ch" id="costs">
-  <div class="ch-head"><div class="eyebrow">Section 10 / Costs</div><h2>Launch and monthly costs<small>上线与每月费用</small></h2></div>
+  <div class="ch-head"><div class="eyebrow">Section 11 / Costs</div><h2>Launch and monthly costs<small>上线与每月费用</small></h2></div>
   <p class="prose">网站要上线，需要三样东西：<b>网域</b>（网址，例如 athlo.my）、<b>主机</b>（网站运作的地方）和<b>资料库</b>（存放学员、课程、付款资料）。网域和主机是分开购买的，再用设定把网址指向主机。Email 发送使用同一个网域。</p>
   <div class="tbl" id="cost-table"><table>
     <tr><th>项目</th><th>选择</th><th>免费方案</th><th>正式上线方案</th><th>付费方式</th></tr>
@@ -715,27 +735,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <p class="prose" style="font-size:14px">资料来源：Vercel、Supabase、Resend、Render 官网价格页，Cloudflare 与 Exabytes 网域价格；查询日期 18 Oct 2026，未含税。服务商可能调整价格，签约前请再确认。</p>
 </section>
 
-<!-- 11 -->
-<section class="ch" id="admin">
-  <div class="ch-head"><div class="eyebrow">Section 11 / Admin &amp; website</div><h2>Admin and website content<small>平台管理与网站内容</small></h2></div>
-  <p class="prose">平台管理员不用改代码就能维护网站和所有课程。每一项修改都会写进操作记录（Audit log），查得到谁在什么时候改了什么。</p>
-  <div class="tbl"><table>
-    <tr><th>管理员可以改</th><th>内容</th><th>说明</th></tr>
-    <tr><td>首页广告</td><td>上传一张或多张横幅；首页每 2 秒自动轮播</td><td>可一次选多张或直接拖进来；按住卡片拖拽排序；删除；改完按“保存”才生效，“放弃更改”全部还原</td></tr>
-    <tr><td>关于我们 / 联系我们</td><td>中英文内容、Email、WhatsApp、营业时间</td><td>右边即时预览；营业时间用 4 个选单（开始 / 结束的日子与时间）</td></tr>
-    <tr><td>课程</td><td>查看、搜寻、新增、编辑、封存任何教练的课程与上课时间</td><td>以该教练的名义修改，规则与教练自己改时相同</td></tr>
-    <tr><td>教练资料</td><td>名字、介绍、照片、运动项目、Verified 标记</td><td>新教练的资格审核在“Coach review”</td></tr>
-    <tr><td>运动与地区</td><td>新增运动（中英文名称、封面）、显示 / 隐藏；新增、改名、删除地区</td><td>还有课程在用的运动或地区不能删除；地区改名会同步到所有课程</td></tr>
-    <tr><td>平台优惠码</td><td>% 或固定金额；所有教练或指定教练；有效期与使用上限</td><td>可一键产生代码；即时预览家长省多少；折扣由平台承担，教练按原价收入；可封存</td></tr>
-    <tr><td>支援信箱</td><td>家长、教练和网站访客的问题</td><td>“联系我们”的表单直接进这里</td></tr>
-  </table></div>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/banners.jpg" data-anim="ux/banners.webp" alt="UI · 首页广告管理" loading="lazy"><div class="shot-cap"><b>UI · 首页广告管理</b><span>一次上传 3 张（逐张亮起）→ 拖拽排序 → 删除（碎成沙子）→ 保存 → 首页轮播</span></div></figure></div>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/site-text.jpg" data-anim="ux/site-text.webp" alt="UI · 联系我们与地区" loading="lazy"><div class="shot-cap"><b>UI · 联系我们与地区</b><span>修改介绍文字，右边即时预览 → 改营业时间 → 保存 → 新增地区</span></div></figure></div>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-courses.jpg" data-anim="ux/admin-courses.webp" alt="UI · 课程管理与教练资料" loading="lazy"><div class="shot-cap"><b>UI · 课程管理与教练资料</b><span>搜寻课程 → 编辑 → 教练资料</span></div></figure></div>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-promos.jpg" data-anim="ux/admin-promos.webp" alt="UI · 平台优惠码" loading="lazy"><div class="shot-cap"><b>UI · 平台优惠码</b><span>新增 → 产生代码（乱码解码）→ 改成固定金额，预览数字滚动 → 指定教练 → 保存</span></div></figure></div>
-</section>
-
-<!-- 11 -->
+<!-- 04 -->
 <section class="ch" id="ui">
   <div class="ch-head"><div class="eyebrow">Section 12 / UI &amp; UX</div><h2>UI and UX<small>界面与交互展示（Phase 1 原型，25 Oct 2026）</small></h2></div>
   <p class="prose">首页和课程页参考 Rimowa：大图、细字、留白、少颜色。登录后的后台参考 360Player：左侧导航、清楚的表格和状态标签，颜色按意思使用（绿色确认、红色删除或放弃、橙色主要行动）。所有页面用同一套交互：换页淡入、列表依次出现、按钮有统一的转圈 → 对勾反馈、不能按的按钮一律变灰；系统开启“减少动态效果”时这些动画会自动关掉。以下动图都是从原型直接录下来的；照片与人名为样本。</p>
@@ -841,7 +841,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <figure class="shot"><img src="img/16-p2-logo-marquee.jpg" width="1600" height="440" alt="Phase 2: academy logo showcase on landing page" loading="lazy"><div class="shot-cap"><b>设计稿 · Phase 2 · Logo showcase 学院 logo 流动带</b><span>平台首页，自动横向流动，鼠标移上去暂停</span></div></figure>
 
   <div class="part" id="p2-pay"><span>14E</span><h3>Payments with academies / 学院加入后的收款</h3></div>
-  <p class="prose">学院加入后，收款对象从“个人教练”变成“教练或学院”。<a class="xref" href="#pay-modes">第 06 章 · 收款方式</a>的三种收款方式同样适用，差别在于结款给谁：</p>
+  <p class="prose">学院加入后，收款对象从“个人教练”变成“教练或学院”。<a class="xref" href="#pay-modes">第 07 章 · 收款方式</a>的三种收款方式同样适用，差别在于结款给谁：</p>
   <div class="tbl"><table>
     <tr><th>Phase 1 选择</th><th>Phase 2 学院加入后</th></tr>
     <tr><td>A · 直接付给教练</td><td>学院课程的钱直接进学院户口；个人教练照旧。需要按交易抽成时，改用 C。</td></tr>
