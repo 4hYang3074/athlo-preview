@@ -39,7 +39,7 @@ p{margin:0}
 .bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .bar .wrap{display:flex;align-items:center;gap:16px;min-height:60px}
 .logo{font-weight:500;letter-spacing:.35em;font-size:14px;color:var(--ink);text-decoration:none}
-.nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none;min-width:0}
+.nav{position:relative;display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none;min-width:0}
 .nav a{flex:none;text-decoration:none;color:var(--muted);font-size:13.5px;padding:6px 10px;border-radius:999px;white-space:nowrap}
 .nav a:hover,.nav a.on{color:var(--ink);background:var(--soft)}
 .theme{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;width:36px;height:36px;cursor:pointer}
@@ -463,12 +463,19 @@ document.querySelectorAll('figure .frame:not(.scroller) img').forEach((img) => {
 });
 lb.addEventListener('click', () => lb.close());
 
-// Highlight the section in view in the top bar.
-const links = [...document.querySelectorAll('#nav a')];
+// Highlight the section in view in the top bar. Only the bar itself scrolls sideways to show it:
+// scrollIntoView would also scroll the page and fight the reader's own scrolling.
+const nav = document.getElementById('nav');
+const links = [...nav.querySelectorAll('a')];
+let current = null;
 const io = new IntersectionObserver((entries) => {
-  for (const e of entries) if (e.isIntersecting) {
-    links.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
-    document.querySelector('#nav a.on')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  for (const e of entries) if (e.isIntersecting && e.target.id !== current) {
+    current = e.target.id;
+    links.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + current));
+    const on = nav.querySelector('a.on');
+    if (on && (on.offsetLeft < nav.scrollLeft || on.offsetLeft + on.offsetWidth > nav.scrollLeft + nav.clientWidth)) {
+      nav.scrollTo({ left: on.offsetLeft - 16, behavior: 'instant' });
+    }
   }
 }, { rootMargin: '-40% 0px -55% 0px' });
 document.querySelectorAll('section.sec').forEach((s) => io.observe(s));
