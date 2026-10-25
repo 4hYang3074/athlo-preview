@@ -278,6 +278,15 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   </div>
 </header>
 
+<section class="ch hl" id="highlights">
+  <div class="ch-head"><div class="eyebrow">Highlights / 视觉亮点</div><h2>One tap, a new look<small>一键切换亮暗模式与中英文</small></h2></div>
+  <p class="prose">每一页右上角都有两个按钮：太阳 / 月亮切换亮暗模式，新的配色从按钮处以圆形展开、盖满整页；EN / 中文切换语言，画面先轻轻模糊、换字后再对焦清楚。两种模式、两种语言下所有页面都完整可用，晚上看手机不刺眼，家长和教练各自用习惯的语言。</p>
+  <div class="ux-grid">
+    <figure class="shot clip"><img src="ux/poster/theme.jpg" data-anim="ux/theme.webp" alt="UX · 亮 / 暗模式切换" loading="lazy"><div class="shot-cap"><b>UX · 亮 / 暗模式切换</b><span>在家长首页按月亮：深色从按钮处圆形展开 → 切换孩子 → 按太阳切回浅色</span></div></figure>
+    <figure class="shot clip"><img src="ux/poster/language.jpg" data-anim="ux/language.webp" alt="UX · 中英文切换" loading="lazy"><div class="shot-cap"><b>UX · 中英文切换</b><span>按 EN / 中文：模糊 → 换字 → 对焦；换页后语言保持，按一下再切回</span></div></figure>
+  </div>
+</section>
+
 <nav class="toc" aria-label="Contents">
   <a href="#glance"><span>01</span>At a glance / 一页看懂</a>
   <a href="#overview"><span>02</span>Overview / 系统总览</a>
@@ -311,7 +320,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>Account 帐号</td><td>一个帐号；家长帐号下可以有多个孩子</td><td>学员多为未成年人，由家长操作，课时按孩子分开</td></tr>
     <tr><td>Courses 课程</td><td>每门课属于一位教练，由教练自己管理课程、学员和套票</td><td>Phase 1 先服务个人教练</td></tr>
     <tr><td>Joining 加入</td><td>报名课程时自动成为该教练的学员</td><td>报名后就能上课，步骤最少</td></tr>
-    <tr><td>Payment 收款</td><td>支付网关（FPX / 卡 / 电子钱包）付款成功 → 课时自动入帐；钱由平台统一收还是直接给教练，<a class="xref" href="#q01">待确认 #01</a></td><td>见 <a class="xref" href="#pay-modes">第 06 章 · 收款方式</a>三种收款方式</td></tr>
+    <tr><td>Payment 收款</td><td>支付网关（FPX / 卡 / 电子钱包）付款成功 → 课时自动入帐；平台统一收款或支付公司自动分帐，<a class="xref" href="#q01">待确认 #01</a></td><td>见 <a class="xref" href="#pay-modes">第 06 章 · 收款方式</a>三种收款方式</td></tr>
     <tr><td>Pricing 价格</td><td>教练的套票 + Promo code</td><td>开学优惠、推广活动</td></tr>
     <tr><td>Check-in 签到</td><td>两种方式：学员扫教练一键产生的签到码；教练在名单上手动签到。临时来上课的学员可以直接加入名单</td><td>有手机的扫码最快；没手机或临时来的由教练处理</td></tr>
     <tr><td>Class size 人数上限</td><td>每堂课设定人数上限，课程页和签到画面都显示“已报名 / 上限”</td><td>家长报名前就知道还有没有名额</td></tr>
@@ -376,15 +385,15 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
 <section class="ch" id="roles">
   <div class="ch-head"><div class="eyebrow">Section 03 / Roles</div><h2>Roles<small>Phase 1 的三种身份</small></h2></div>
   <div class="roles" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-    <div class="role"><div class="who">Parent</div><h4>Student &amp; Parent<br>学生与家长</h4><ul><li>浏览课程与介绍</li><li>为孩子报名、付款</li><li>使用优惠码</li><li>扫码签到</li><li>看课表、剩余课数、出勤</li><li>下载收据</li></ul><div class="no">不能：看其他学员资料、改出勤</div></div>
-    <div class="role"><div class="who">Coach</div><h4>Individual coach<br>个人教练</h4><ul><li>开课：介绍、时间、地点、人数上限</li><li>套票与优惠码</li><li>一键产生签到码、手动签到、Walk-in</li><li>确认付款（视收款方式）</li><li>学员课时、课时不足提醒</li><li>报表与导出</li></ul><div class="no">只能看到自己的课程和学员</div></div>
+    <div class="role"><div class="who">Parent</div><h4>Student &amp; Parent<br>学生与家长</h4><ul><li>浏览课程与介绍</li><li>为孩子报名、付款</li><li>使用优惠码</li><li>首页：签到、通知、下一堂课、剩余课时</li><li>扫码签到，可选为哪个孩子或自己签到</li><li>看课表、剩余课数、出勤</li><li>下载收据</li></ul><div class="no">不能：看其他学员资料、改出勤</div></div>
+    <div class="role"><div class="who">Coach</div><h4>Individual coach<br>个人教练</h4><ul><li>开课：介绍、时间、地点、人数上限</li><li>套票与优惠码</li><li>一键产生签到码、手动签到、Walk-in</li><li>查看收款与结款（网关自动确认付款）</li><li>学员课时、课时不足提醒</li><li>报表与导出</li></ul><div class="no">只能看到自己的课程和学员</div></div>
     <div class="role dark"><div class="who">Platform</div><h4>Platform Admin<br>平台管理员</h4><ul><li>审核与开通教练（资格证书）</li><li>教练订阅方案</li><li>用户支援、帐号问题</li><li>操作记录 Audit log</li></ul><div class="no">不替教练点名或改价格</div></div>
   </div>
   <figure class="fig">
     <svg viewBox="0 0 1000 250" role="img" aria-label="Example: one person can be a parent and a coach with the same account">
       <rect x="30" y="30" width="230" height="190" class="box2"/>
       <text x="50" y="62" font-size="14" class="t3">Example 例子</text>
-      <text x="50" y="92" font-size="18" font-weight="500">Daniel Chong</text>
+      <text x="50" y="92" font-size="18" font-weight="500">Aiman Rahman</text>
       <text x="50" y="116" font-size="13" class="t2">daniel@email.com</text>
       <text x="50" y="160" font-size="13" class="t2">一个帐号、一组密码</text>
       <text x="50" y="182" font-size="13" class="t2">左上角切换身份</text>
@@ -393,27 +402,40 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
       <rect x="380" y="36" width="580" height="48" class="box"/>
       <text x="400" y="66" font-size="14" font-weight="500">Parent 家长端</text><text x="560" y="66" font-size="13" class="t2">儿子 Ryan 报名了 Coach Wei 的 Mini Tennis</text>
       <rect x="380" y="101" width="580" height="48" class="box"/>
-      <text x="400" y="131" font-size="14" font-weight="500">Coach 教练后台</text><text x="560" y="131" font-size="13" class="t2">自己开的 Junior Development 等 5 门课</text>
+      <text x="400" y="131" font-size="14" font-weight="500">Coach 教练后台</text><text x="560" y="131" font-size="13" class="t2">自己开的 Junior Volleyball Foundations 等课程</text>
       <rect x="380" y="166" width="580" height="48" class="box"/>
       <text x="400" y="196" font-size="14" font-weight="500" class="t3">切换方式</text><text x="560" y="196" font-size="13" class="t2">在左上角选择“家长”或“教练”</text>
     </svg>
     <figcaption>Figure 3.1 · 同一个人可以是家长，也可以是教练，不需要两个帐号。</figcaption>
   </figure>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/tour-coach.jpg" data-anim="ux/tour-coach.webp" alt="UI · 教练后台导览" loading="lazy"><div class="shot-cap"><b>UI · 教练后台导览</b><span>首页 → 课表 → 课程 → 签到 → 套票 → 收款 → 学员 → 报表</span></div></figure><figure class="shot clip phone"><img src="ux/poster/tour-parent.jpg" data-anim="ux/tour-parent.webp" alt="UI · 家长手机导览" loading="lazy"><div class="shot-cap"><b>UI · 家长手机导览</b><span>课表 → 购买 → 孩子 → 通知</span></div></figure></div>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/tour-admin.jpg" data-anim="ux/tour-admin.webp" alt="UI · 平台管理导览" loading="lazy"><div class="shot-cap"><b>UI · 平台管理导览</b><span>首页 → 教练审核 → 教练资料 → 课程 → 网站 → 方案 → 支援 → 操作记录</span></div></figure></div>
+  <h3 id="homes">Home pages / 首页：一打开就看到重点</h3>
+  <p class="prose">家长、学生、教练登录后先到自己的首页，最重要的放在最上面：右上角是绿色的<b>签到</b>按钮（家长和学生是「扫码签到」，教练是「开始签到」，管理员不需要）；接着是<b>通知</b>、<b>下一堂课</b>和<b>剩余课时</b>。颜色按意思使用：绿色＝已签到、课时充足；琥珀色＝快开始、快用完（剩 2 堂以下）；红色＝已用完或付款被拒；蓝色＝一般信息和未读。</p>
+  <div class="tbl"><table>
+    <tr><th>区块</th><th>显示什么</th><th>家长</th><th>学生</th><th>教练</th></tr>
+    <tr><td>签到按钮</td><td>首屏右上角；有课正在进行或一小时内开始时，按钮外圈会轻轻脉动提醒</td><td>扫码签到</td><td>扫码签到</td><td>开始签到</td></tr>
+    <tr><td>通知</td><td>未读排最前，紧急（红）先于提醒（琥珀）和一般信息；未读有蓝点和淡蓝底；家长的每条通知标明是哪个孩子</td><td>✓（标孩子）</td><td>✓</td><td>最新动态</td></tr>
+    <tr><td>下一堂课</td><td>课名、时间、地点、教练，附「正在上课 / X 分钟后 / 今天 / 明天」标签</td><td>✓</td><td>✓</td><td>今天的课与签到进度</td></tr>
+    <tr><td>剩余课时</td><td>每位教练一个环形图；剩 2 堂以下变琥珀色、用完变红色并出现「续买」</td><td>✓</td><td>✓</td><td>课时不足的学员</td></tr>
+    <tr><td>接下来 · 本月出勤</td><td>两周内的其他课；本月出席 / 迟到 / 缺席次数</td><td>✓</td><td>✓</td><td>—</td></tr>
+    <tr><td>孩子列表</td><td>每个孩子一张卡：下一堂课、剩余课时、未读数；点一下，下面换成这个孩子的内容（左右滑动切换）</td><td>✓</td><td>—</td><td>—</td></tr>
+  </table></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/home-parent.jpg" data-anim="ux/home-parent.webp" alt="UI · 家长首页" loading="lazy"><div class="shot-cap"><b>UI · 家长首页</b><span>孩子卡片 → 点 Chloe：内容滑过来（课时用完，红色＋续买）→ 点回 Ethan → 打开一条未读通知</span></div></figure><figure class="shot clip phone"><img src="ux/poster/home-student.jpg" data-anim="ux/home-student.webp" alt="UI · 学生首页（手机）" loading="lazy"><div class="shot-cap"><b>UI · 学生首页（手机）</b><span>通知 → 下一堂课 → 剩余课时 → 本月出勤 → 扫码签到</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/tour-coach.jpg" data-anim="ux/tour-coach.webp" alt="UI · 教练后台导览" loading="lazy"><div class="shot-cap"><b>UI · 教练后台导览</b><span>首页 → 课表 → 课程 → 签到 → 套票 → 收款 → 学员 → 报表</span></div></figure><figure class="shot clip phone"><img src="ux/poster/tour-parent.jpg" data-anim="ux/tour-parent.webp" alt="UI · 家长手机导览" loading="lazy"><div class="shot-cap"><b>UI · 家长手机导览</b><span>首页 → 课表 → 购买 → 孩子 → 通知</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/tour-admin.jpg" data-anim="ux/tour-admin.webp" alt="UI · 平台管理导览" loading="lazy"><div class="shot-cap"><b>UI · 平台管理导览</b><span>首页 → 教练审核 → 教练资料 → 课程 → 优惠码 → 网站 → 方案 → 支援 → 操作记录</span></div></figure></div>
 </section>
 
 <!-- 04 -->
 <section class="ch" id="pages">
   <div class="ch-head"><div class="eyebrow">Section 04 / Page map</div><h2>Page map<small>页面地图：每种身份的导航</small></h2></div>
   <div class="navs" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-    <div class="nav"><div class="ws">Parent<small>学生 &amp; 家长 · 手机底部 Tab</small></div><ol><li>Home<i>扫码 · 今日课</i></li><li>Courses<i>浏览 · 报名</i></li><li>Schedule</li><li>Payments<i>套票 · 收据</i></li><li>Attendance</li><li>My children</li><li>Account</li></ol></div>
-    <div class="nav"><div class="ws">Coach<small>平板 / 电脑</small></div><ol><li>Home<i>今日概况</i></li><li>Courses<i>介绍 · 名额</i></li><li>Sessions</li><li>Attendance<i>签到</i></li><li>Students<i>课时</i></li><li>Packages<i>优惠码</i></li><li>Payments<i>待确认</i></li><li>Reports</li><li>Settings</li></ol></div>
-    <div class="nav"><div class="ws">Platform<small>Athlo 团队</small></div><ol><li>Overview</li><li>Coaches<i>审核</i></li><li>Users</li><li>Subscriptions</li><li>Support</li><li>Audit log</li><li>Settings</li></ol></div>
+    <div class="nav"><div class="ws">Parent<small>学生 &amp; 家长 · 电脑侧边栏 / 手机底部 Tab</small></div><ol><li>Home<i>签到 · 通知 · 下一堂课 · 课时</i></li><li>Check-in<i>选孩子 · 扫码</i></li><li>Schedule<i>课表 · 出勤</i></li><li>Buy<i>套票 · 优惠码</i></li><li>Children<i>学生为 Family</i></li><li>Notifications</li><li>Receipts</li><li>Support</li><li>Settings</li></ol></div>
+    <div class="nav"><div class="ws">Coach<small>平板 / 电脑</small></div><ol><li>Home<i>今日概况 · 开始签到</i></li><li>Schedule</li><li>Courses<i>介绍 · 名额</i></li><li>Check-in<i>签到码 · 点名</i></li><li>Packages</li><li>Promo codes</li><li>Payments<i>收款 · 结款</i></li><li>Students<i>课时</i></li><li>Reports</li><li>Settings</li></ol></div>
+    <div class="nav"><div class="ws">Platform<small>Athlo 团队</small></div><ol><li>Overview</li><li>Coach review<i>审核</i></li><li>Coach profiles</li><li>Courses</li><li>Promo codes<i>平台优惠码</i></li><li>Users</li><li>Plans<i>订阅方案</i></li><li>Website<i>广告 · 关于 · 联系 · 运动地区</i></li><li>Support</li><li>Audit log</li><li>Settings<i>平台收款</i></li></ol></div>
   </div>
   <div class="tbl"><table>
     <tr><th>Public pages 公开页面</th><th>Content 内容</th><th>Login 需登录</th></tr>
-    <tr><td>Landing 首页</td><td>全屏大图、运动分类、使用流程、家长与教练介绍、Footer</td><td>No</td></tr>
+    <tr><td>Landing 首页</td><td>广告横幅轮播、运动分类、使用流程、家长与教练介绍、Footer；手机上连结收进左上角菜单</td><td>No</td></tr>
+    <tr><td>About / Contact 关于与联系我们</td><td>内容由管理员编辑；联系表单直接进管理员的支援信箱</td><td>No</td></tr>
     <tr><td>Courses 课程总览</td><td>所有开放报名的课，可按运动、年龄、程度、日期、地区筛选</td><td>No</td></tr>
     <tr><td>Course detail 课程介绍</td><td>课程介绍、学习内容、适合谁、教练、时间地点、人数上限、价格、其他推荐课程</td><td>报名时才需登录</td></tr>
   </table></div>
@@ -431,13 +453,13 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <div class="step"><div class="n">5</div><div class="who">System</div><h4>自动进名单</h4><p>孩子出现在教练名单和家长的课表上。</p></div>
   </div>
   <h3>Example / 例子：Sarah 为女儿报名</h3>
-  <div class="cast"><span><b>Sarah Lim</b> 家长</span><span><b>Chloe</b> 女儿，11 岁</span><span><b>Daniel Chong</b> 个人排球教练</span></div>
+  <div class="cast"><span><b>Sarah Lim</b> 家长</span><span><b>Chloe</b> 女儿，11 岁</span><span><b>Aiman Rahman</b> 个人排球教练</span></div>
   <div class="story">
-    <div class="s"><div class="when">Mon 19 Oct</div><div>Sarah 在 Instagram 看到 Athlo 的广告，进入课程页，筛选“Volleyball · Age 10–13”，看到 Coach Daniel 的 <b>Junior Development</b>：每周六 10:00，13 / 16 人，还剩 3 个名额。</div></div>
+    <div class="s"><div class="when">Mon 19 Oct</div><div>Sarah 在 Instagram 看到 Athlo 的广告，进入课程页，筛选“Volleyball · Age 10–13”，看到 Coach Aiman 的 <b>Junior Volleyball Foundations</b>：每周一 17:00，8 / 12 人，还剩 4 个名额。</div></div>
     <div class="s"><div class="when">Mon 19 Oct</div><div>她按“报名”，用 Google 注册帐号，加入孩子 <b>Chloe</b>，选 12 堂课 RM 480，输入优惠码 <b>TERM4</b> 减 RM 40，用 FPX 网上银行付 RM 440。</div></div>
     <div class="s"><div class="when">Tue 20 Oct</div><div>付款成功，Chloe 立刻获得 12 堂课，Sarah 收到收据 email。</div></div>
-    <div class="s"><div class="when">Sat 24 Oct</div><div>Daniel 在平板按“Start check-in”。Sarah 到场后扫码、勾选 Chloe，系统记录出席并扣 1 堂：<b>12 → 11</b>。Daniel 的名单上 Chloe 立刻变成“已签到”。</div></div>
-    <div class="s"><div class="when">Nov</div><div>Sarah 随时看到 Chloe 的课表、出勤和剩余课数。她在课程页看到 Daniel 开的 <b>December Holiday Camp</b>，再为 Chloe 报名。</div></div>
+    <div class="s"><div class="when">Mon 26 Oct</div><div>Aiman 在平板的首页按“开始签到”。Sarah 到场后在签到页选 Chloe、扫码，系统记录出席并扣 1 堂：<b>12 → 11</b>。Aiman 的名单上 Chloe 立刻变成“已签到”，Sarah 的首页也同步更新。</div></div>
+    <div class="s"><div class="when">Nov</div><div>Sarah 随时看到 Chloe 的课表、出勤和剩余课数。她在课程页看到 Aiman 开的 <b>December Holiday Camp</b>，再为 Chloe 报名。</div></div>
   </div>
   <div class="two">
     <div>
@@ -471,7 +493,8 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <div class="tier"><b>Public 公开</b><span>所有人都看得到，包括还没注册的人。例：Trial RM 30、4 堂 RM 160、12 堂 RM 480。</span><em>课程介绍页</em></div>
     <div class="tier"><b>Members only 学员专属</b><span>已经在该教练上课的学员才看得到。例：Monthly unlimited RM 320。</span><em>学员的 Payments 页</em></div>
     <div class="tier"><b>Hidden 隐藏</b><span>先建立好、暂不公开。例：12 月假期营，11 月才开放。</span><em>只有教练</em></div>
-    <div class="tier top" id="promo"><b>Promo code 优惠码</b><span>% 或固定金额；可限定套票、总次数、每人次数和有效期。例：TERM4 减 RM 40，限 50 次。</span><em>结帐时输入</em></div>
+    <div class="tier top" id="promo"><b>Promo code 优惠码（教练）</b><span>教练为自己的套票设定：% 或固定金额、总次数、有效期。例：WELCOME10 打九折。<b>折扣由教练承担。</b></span><em>结帐时输入</em></div>
+    <div class="tier top"><b>Platform promo 平台优惠码</b><span>平台管理员设定，适用所有教练或指定教练。例：TERM4 减 RM 40，限 50 次。<b>折扣由平台承担，教练仍按原价收入。</b></span><em>结帐时输入</em></div>
   </div>
   <h3>Payment flow / 付款流程</h3>
   <div class="steps" style="--n:5">
@@ -481,7 +504,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <div class="step"><div class="n">4</div><div class="who">System</div><h4>课时入帐、发收据</h4><p>课时写入记录，收据以 email 寄出；教练收到“收到付款”通知。</p></div>
     <div class="step"><div class="n">5</div><div class="who">Platform</div><h4>结款给教练</h4><p>按每周或每月的周期转进教练的银行户口（平台怎么收费见下方）。</p></div>
   </div>
-  <div class="note"><b>原型现况（25 Oct 2026）：</b>付款画面已改为 Payment Gateway（FPX / 卡 / 电子钱包），目前是 Sandbox 模拟，还没接上真正的网关。下方的 DuitNow QR 做法比较保留作参考。</div>
+  <div class="note"><b>已确定：</b>付款使用支付网关 API（FPX 网上银行、卡、电子钱包），付款成功自动加课时、寄收据，不用上传收据或人工对帐。原型目前是 Sandbox 模拟，还没接上真正的网关。</div>
 
   <h3 id="pay-modes">Who receives the money / 钱收进谁的户口（<a class="xref" href="#q01">待确认 #01</a>）</h3>
   <p class="prose">课程属于教练，但钱可以直接给教练，也可以先由平台统一收、再结款给教练。这会影响谁确认付款、平台怎么收费，以及 Phase 2 学院加入后要不要调整。</p>
@@ -492,10 +515,6 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>C · 支付公司自动分帐</td><td>家长 → 支付公司 → 自动扣平台抽成 → 汇给教练或学院</td><td>自动</td><td>自动对帐、自动抽成、付款后立刻加课时</td><td>每笔有手续费；每位教练或学院要通过支付公司审核；要接 API</td><td><span class="b p2">Phase 2</span></td></tr>
   </table></div>
   <div class="note"><b>360Player 的做法（C）：</b>它不把钱收进自己的户口。每间俱乐部在支付公司（Adyen，旧客户用 Stripe）开有自己的商家帐户；家长付款后，支付公司自动扣掉 360Player 的抽成和手续费，剩下的<b>每周</b>汇进俱乐部的银行户口，俱乐部用 Payout report 对帐。</div>
-  <div class="ex">
-    <div class="exc"><div class="q">Path 1 · Phase 1 用 A</div><h4>先让钱直接给教练</h4><p>平台向教练收月费。Phase 2 学院加入后，学院同样直接收款；需要按交易抽成时再改用 C。</p></div>
-    <div class="exc"><div class="q">Path 2 · Phase 1 用 B</div><h4>先由平台统一收款</h4><p>平台定期结款给教练。Phase 2 学院加入后，结款对象多了学院；交易量变大时改用 C，减少人工结款。</p></div>
-  </div>
 
   <h3 id="fee-model">Platform fee model / 平台怎么收费（<a class="xref" href="#q02">待确认 #02</a>）</h3>
   <p class="prose">上表的收款方式决定<b>钱怎么走</b>；收费模式决定<b>平台从哪里赚钱</b>。目前原型按<b>模式 1「教练拿全额，平台只收月费」</b>来做：家长付的钱教练全数拿到，只扣支付网关本身的手续费；平台的收入来自教练每月付的订阅方案。以下三种模式供客户选择。</p>
@@ -518,34 +537,9 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <div class="exc"><div class="q">看例子的重点</div><h4>小教练和大教练的感受不同</h4><p>· 生意少的 Wei：只抽成（模式 2）对他最划算，因为没有固定月费。<br>· 生意多的 Aiman：只收月费（模式 1）对他最划算，平台收入则最少。<br>· 模式 3 介于两者之间：平台从小教练收得最多（RM 65），从大教练收 RM 179。</p></div>
     <div class="exc" style="border-color:var(--strong)"><div class="q">建议 Recommend</div><h4>Phase 1 先用模式 1（只收月费）</h4><p>教练最容易接受，系统也最简单。等教练数量和交易量变大，再评估是否加入较低的抽成（模式 3）。加入抽成时要改：Admin 设定抽成 %；结款金额 = 付款 − 抽成；教练的结款和报表要显示总额、抽成、实收。</p></div>
   </div>
-  <div class="note"><b>钱怎么走（原型现况）：</b>家长用 FPX / 卡 / 电子钱包付款，钱先进平台的支付网关户口（上表方式 B）；平台按 Admin 设定的周期（每周或每月）把钱转进教练在“Payout account”填写的银行户口。选模式 1 时，可以设计成月费直接从结款中扣，教练不用另外付款。如果改选方式 A（钱直接给教练），平台就要另外向教练收月费（例如每月自动扣卡），并要处理逾期未付。</div>
+  <div class="note"><b>钱怎么走（原型现况）：</b>家长用 FPX / 卡 / 电子钱包付款，钱先进平台的支付网关户口（上表方式 B）；平台按 Admin 设定的周期（每周或每月）把钱转进教练在“Payout account”填写的银行户口。选模式 1 时，可以设计成月费直接从结款中扣，教练不用另外付款。</div>
   <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-payments.jpg" data-anim="ux/admin-payments.webp" alt="UI · 平台收款设定、教练结款户口、套票" loading="lazy"><div class="shot-cap"><b>UI · 平台收款设定、教练结款户口、套票</b><span>管理员设定结款周期 → 教练的结款户口 → 教练的套票与优惠码</span></div></figure></div>
-  <h3 id="qr-options">Payment QR options / 收款 QR 的三种做法</h3>
-  <p class="prose">DuitNow QR 是国际通用的 EMVCo 格式，QR 里只是一串文字：收款户口、金额、参考编号和校验码。系统可以自己产生这串文字，不一定要接 API。三种做法的差别在于费用、方便程度和安全性。</p>
-  <div class="tbl"><table>
-    <tr><th>做法</th><th>需要 API</th><th>平台费用</th><th>金额</th><th>付款确认</th></tr>
-    <tr><td>A · 收款方固定 QR</td><td>不用</td><td>免费</td><td>家长自己输入，容易打错</td><td>人工对帐</td></tr>
-    <tr><td>B · 系统自动产生带金额的 QR</td><td>不用</td><td>免费</td><td>系统计算好，自动带入，附参考编号</td><td>人工对帐，参考编号让对帐更快</td></tr>
-    <tr><td>C · Payment Gateway</td><td>要</td><td>每笔手续费</td><td>自动</td><td>付款成功后自动入帐</td></tr>
-  </table></div>
-  <p class="prose" style="font-size:14px">以下评估做法 B，前提是已用主要银行 App（Maybank、CIMB、Public Bank、TNG 等）测试，确认都能正确读取金额。银行的商家 MDR 依收款方与银行的方案计算，与平台无关。</p>
-  <div class="two">
-    <div class="exc"><div class="q">Pros · 好处</div><h4>免费，而且方便</h4><p>· 不需要 Gateway，平台没有每笔手续费。<br>· 系统按套票和优惠码算好金额，自动产生 QR，家长不用自己输入金额。<br>· 每笔附参考编号，对帐更快。</p></div>
-    <div class="exc" style="border-color:var(--bad)"><div class="q" style="color:var(--bad)">Cons · 坏处：安全性</div><h4>出事时钱追不回来</h4><p>· <b>收款户口被换掉：</b>如果网站被攻击，收款 QR 被换成别人的户口，家长付的钱会直接转给对方，<b>无法追回</b>。<br>· <b>浏览器端被篡改：</b>为了快而在浏览器里产生 QR 的话，有心人可以改掉金额或户口。<br>· <b>假收据：</b>家长可以上传修改过的截图。<br>· 没有自动确认，仍需人工对帐。</p></div>
-  </div>
-  <h3 id="qr-risks">Potential risks / 做法 B 的潜在风险</h3>
-  <p class="prose">以下风险来自做法 B 的运作方式本身。系统可以降低发生的机会，但<b>无法保证不会发生</b>，一旦发生，损失可能无法追回。</p>
-  <div class="tbl"><table>
-    <tr><th>风险</th><th>可能发生的情况</th><th>影响</th><th>能否完全避免</th></tr>
-    <tr><td>收款户口被换掉</td><td>网站或帐号被入侵，收款 QR 被换成他人的户口</td><td>家长付的钱直接转进对方户口，<b>无法追回</b>；直到被发现前的每一笔都会受影响</td><td><span class="b bad">不能</span></td></tr>
-    <tr><td>付款资料被篡改</td><td>有心人修改页面上的金额或收款资料</td><td>收到的金额少于应收，或钱进了别的户口</td><td><span class="b bad">不能</span></td></tr>
-    <tr><td>假收据</td><td>家长上传修改过的付款截图</td><td>如果没有对照银行入帐就确认，课时会被白白加上</td><td><span class="b bad">不能</span>，要靠人工对帐</td></tr>
-    <tr><td>银行 App 读取问题</td><td>个别银行 App 更新后不再支援带金额的 QR</td><td>家长扫不到或金额没带入，需手动输入</td><td><span class="b bad">不能</span></td></tr>
-    <tr><td>银行或 PayNet 规定</td><td>收单银行认为修改后的 QR 不符合条款</td><td>收款功能可能被要求停用</td><td><span class="b warn">需先向银行确认</span></td></tr>
-    <tr><td>人工对帐出错</td><td>少付、多付、重复付款没有被发现</td><td>课时与实际收款不符，需事后追讨或退款</td><td><span class="b bad">不能</span></td></tr>
-  </table></div>
-  <div class="note"><b>建议：</b>做法 B 可以省下手续费，但上面的风险<b>无法完全消除</b>。选用做法 B 前，收款方需要了解并书面同意承担这些风险；需要自动确认、或希望降低风险时，改用做法 C（支付公司）。带金额的 QR 是否符合收单银行与 PayNet 的规定，需由收款方向银行确认。</div>
-  <div class="clips"><figure class="shot clip phone"><img src="ux/poster/buy.jpg" data-anim="ux/buy.webp" alt="UI · 购买套票（手机）" loading="lazy"><div class="shot-cap"><b>UI · 购买套票（手机）</b><span>选孩子 → 选套票 → 输入优惠码 → FPX 选银行 → 付款</span></div></figure></div>
+<div class="clips"><figure class="shot clip phone"><img src="ux/poster/buy.jpg" data-anim="ux/buy.webp" alt="UI · 购买套票（手机）" loading="lazy"><div class="shot-cap"><b>UI · 购买套票（手机）</b><span>选孩子 → 选套票 → 输入优惠码 → FPX 选银行 → 付款</span></div></figure></div>
 </section>
 
 <!-- 07 -->
@@ -553,7 +547,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="ch-head"><div class="eyebrow">Section 07 / Check-in</div><h2>Check-in<small>上课签到（Phase 1 核心功能）</small></h2></div>
   <p class="prose">每堂课有两种签到方式，教练可以同时使用。签到成功时同时扣 1 堂课，教练画面实时更新。</p>
   <div class="ex">
-    <div class="exc"><div class="q">Method 1 · 扫码签到</div><h4>教练一键产生签到码，学员扫描</h4><p>教练在 Today 页按“Start check-in”，屏幕立即出现签到 QR。学员或家长用手机相机扫描，选择到场的孩子即完成。QR 每 20 秒自动更换，截图转发给不在场的人会失效。</p></div>
+    <div class="exc"><div class="q">Method 1 · 扫码签到</div><h4>教练一键产生签到码，学员扫描</h4><p>教练在首页按“开始签到”（或签到页的 Generate QR code），屏幕立即出现签到 QR。家长先选这次为谁签到，再用手机相机扫描；学生直接为自己签到。QR 每 20 秒自动更换，截图转发给不在场的人会失效。</p></div>
     <div class="exc"><div class="q">Method 2 · 手动签到</div><h4>教练在名单上点击学员</h4><p>名单列出这堂课所有学员，每人旁边有“Check in”和“Absent”按钮。适合没带手机的孩子，或家长忘了扫码。</p></div>
   </div>
   <div class="note"><b>选择课堂：</b>签到画面右上角的 Session 选单可以切换到任何一堂课。课堂多时，在选单最上方输入课程名或日期（例：“elite”、“26 Oct”）即可筛选；列表分成“即将上课”（最近的排最前）和“已结束”（最新的排最前）。</div>
@@ -604,7 +598,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
       <h3>Who checks in / 情况与做法</h3>
       <div class="tbl" style="margin-top:14px"><table>
         <tr><th>Situation 情况</th><th>How 做法</th></tr>
-        <tr><td>家长陪孩子来</td><td>方式 1：家长扫一次，可同时勾选多个孩子</td></tr>
+        <tr><td>家长陪孩子来</td><td>方式 1：先在签到页勾选这次为谁签到（孩子，或自己也上课时选自己），扫一次码，有报名这堂课的人会自动勾好</td></tr>
         <tr><td>成人学员</td><td>方式 1：自己扫</td></tr>
         <tr><td>孩子自己来、没手机</td><td>方式 2：教练在名单上按 Check in</td></tr>
         <tr><td>不在名单上的学员</td><td>Add walk-in：搜寻名字加入并签到</td></tr>
@@ -613,7 +607,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
       </table></div>
     </div>
   </div>
-  <div class="clips"><figure class="shot clip"><img src="ux/poster/checkin.jpg" data-anim="ux/checkin.webp" alt="UI · 教练签到" loading="lazy"><div class="shot-cap"><b>UI · 教练签到</b><span>产生签到码 → 名单上按 Check in / Absent，人数即时更新 → Add walk-in 搜寻学员</span></div></figure><figure class="shot clip phone"><img src="ux/poster/scan.jpg" data-anim="ux/scan.webp" alt="UI · 家长扫码签到（手机）" loading="lazy"><div class="shot-cap"><b>UI · 家长扫码签到（手机）</b><span>扫码 → 选择到场的孩子 → 签到完成</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/checkin.jpg" data-anim="ux/checkin.webp" alt="UI · 教练签到" loading="lazy"><div class="shot-cap"><b>UI · 教练签到</b><span>产生签到码 → 名单上按 Check in / Absent，人数即时更新 → Add walk-in 搜寻学员</span></div></figure><figure class="shot clip phone"><img src="ux/poster/scan.jpg" data-anim="ux/scan.webp" alt="UI · 家长扫码签到（手机）" loading="lazy"><div class="shot-cap"><b>UI · 家长扫码签到（手机）</b><span>先选这次为谁签到 → 扫码 → 有报名的人已自动勾好 → 签到完成</span></div></figure></div>
 </section>
 
 <!-- 08 -->
@@ -632,22 +626,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>WhatsApp 自动发送</td><td>要（Meta WhatsApp Business Platform）</td><td>Meta 验证的商家帐号、专用号码、讯息模板审核</td><td>按讯息收费</td><td><span class="b p2">Phase 2</span></td></tr>
     <tr><td>SMS</td><td>要（SMS 服务商）</td><td>服务商帐号、寄件人名称</td><td>每则收费</td><td><span class="b p2">如需要</span></td></tr>
   </table></div>
-  <h3 id="email-quota">Email free quota / Email 免费额度</h3>
-  <div class="tbl"><table>
-    <tr><th>服务</th><th>免费额度</th><th>超过后</th><th>备注</th></tr>
-    <tr><td>Resend</td><td>每月 3,000 封，每天最多 100 封</td><td>Pro US$20 / 月，每月 50,000 封</td><td>免费方案可绑 3 个网域</td></tr>
-    <tr><td>Postmark</td><td>每月 100 封，不会过期</td><td>付费方案</td><td>免费额度只适合测试</td></tr>
-    <tr><td>Amazon SES</td><td>没有长期免费额度；新 AWS 帐号最多 US$200 Free Tier credit，需在 12 个月内用完</td><td>每 1,000 封 US$0.10</td><td>最便宜，但设定较复杂</td></tr>
-    <tr><td>Brevo</td><td>每天 300 封</td><td>付费方案</td><td>帐号要先通过 Brevo 审核才能发送</td></tr>
-    <tr><td>个人 Gmail</td><td>免费；Google 目前未公开确切上限，旧版说明约每天 500 封</td><td>不能加购，超过要等 1–24 小时</td><td>寄件人是 @gmail.com；需开两步验证并产生 App password</td></tr>
-    <tr><td>Google Workspace</td><td>每个帐号每天 2,000 封</td><td>按帐号月费订阅</td><td>寄件人可以是自己的网域，但本身要付月费</td></tr>
-  </table></div>
-  <p class="prose" style="font-size:14px">资料来源：各服务官网价格页，查询日期 18 Oct 2026；价格可能调整，签约前请再确认。以平台初期约 100–200 位学员估算，每月的收据、付款确认和课时提醒约数百封，Resend 免费方案（每月 3,000 封）已足够。注意注册确认、忘记密码等系统 email 也算在同一个额度内。</p>
-  <div class="two">
-    <div class="exc"><div class="q">Option 1 · 个人 Gmail</div><h4>免费，适合测试</h4><p>· 用现有的 Gmail 就能发，不用另外付钱。<br>· 寄件人是 <b>xxx@gmail.com</b>，家长较容易当成诈骗或进垃圾信箱。<br>· Google 侦测到系统大量自动发信时，可能暂停帐号，连平常用的信箱也受影响。<br>· 系统要保存这个 Gmail 的 App password，外泄时整个信箱有风险。</p></div>
-    <div class="exc" style="border-color:var(--strong)"><div class="q">Option 2 · Resend 免费方案 + 自己的网域（建议）</div><h4>发信免费，只需付网域年费</h4><p>· Resend 免费方案每月 3,000 封、每天 100 封，平台初期够用。<br>· 寄件人是自己的网域，例如 <b>noreply@athlo.my</b>，看起来正式，也不容易进垃圾信箱。<br>· 和私人信箱分开，不会互相影响。<br>· <b>唯一要付的是网域年费</b>，见 <a class="xref" href="#cost-table">第 10 章 · 费用表</a>。</p></div>
-  </div>
-  <div class="note"><b>网域年费：</b>.com US$10.46、.com.my RM 59.90、.my RM 89.00，详见 <a class="xref" href="#cost-table">第 10 章 · 费用表</a>。</div>
+  <div class="note" id="email-quota"><b>Email 建议：</b>用 Resend 免费方案（每月 3,000 封，初期 100–200 位学员绰绰有余）加上自己的网域，例如 noreply@athlo.my：看起来正式、不容易进垃圾信箱，只需付网域年费（见 <a class="xref" href="#cost-table">第 10 章 · 费用表</a>）。不建议用个人 Gmail 发系统信。</div>
   <div class="steps" style="--n:4">
     <div class="step"><div class="n">1</div><div class="who">Coach</div><h4>按 Notify all</h4><p>弹出视窗显示收件人与讯息内容，讯息自动带入孩子名字和剩余课数。</p></div>
     <div class="step"><div class="n">2</div><div class="who">System</div><h4>自动发送</h4><p>按“Send in-app &amp; email”，App 内通知和 email 一次送出。</p></div>
@@ -700,7 +679,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
       <path d="M825 220 V200" class="ln" marker-end="url(#a4)"/><text x="834" y="214" font-size="11" class="t3">签到扣 1 堂</text>
       <path d="M630 254 H688" class="ln" marker-end="url(#a4)"/>
       <rect x="40" y="306" width="920" height="40" class="box2"/>
-      <text x="500" y="331" font-size="13" text-anchor="middle" class="t2">每位教练的资料互相隔离：Daniel 只看得到自己的学员、课程和付款</text>
+      <text x="500" y="331" font-size="13" text-anchor="middle" class="t2">每位教练的资料互相隔离：Aiman 只看得到自己的学员、课程和付款</text>
     </svg>
     <figcaption>Figure 9.1 · 系统记录的资料分成三类：使用的人、教练的课程，以及上课和付款的记录。</figcaption>
   </figure>
@@ -747,11 +726,13 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>课程</td><td>查看、搜寻、新增、编辑、封存任何教练的课程与上课时间</td><td>以该教练的名义修改，规则与教练自己改时相同</td></tr>
     <tr><td>教练资料</td><td>名字、介绍、照片、运动项目、Verified 标记</td><td>新教练的资格审核在“Coach review”</td></tr>
     <tr><td>运动与地区</td><td>新增运动（中英文名称、封面）、显示 / 隐藏；新增、改名、删除地区</td><td>还有课程在用的运动或地区不能删除；地区改名会同步到所有课程</td></tr>
+    <tr><td>平台优惠码</td><td>% 或固定金额；所有教练或指定教练；有效期与使用上限</td><td>可一键产生代码；即时预览家长省多少；折扣由平台承担，教练按原价收入；可封存</td></tr>
     <tr><td>支援信箱</td><td>家长、教练和网站访客的问题</td><td>“联系我们”的表单直接进这里</td></tr>
   </table></div>
   <div class="clips"><figure class="shot clip"><img src="ux/poster/banners.jpg" data-anim="ux/banners.webp" alt="UI · 首页广告管理" loading="lazy"><div class="shot-cap"><b>UI · 首页广告管理</b><span>一次上传 3 张（逐张亮起）→ 拖拽排序 → 删除（碎成沙子）→ 保存 → 首页轮播</span></div></figure></div>
   <div class="clips"><figure class="shot clip"><img src="ux/poster/site-text.jpg" data-anim="ux/site-text.webp" alt="UI · 联系我们与地区" loading="lazy"><div class="shot-cap"><b>UI · 联系我们与地区</b><span>修改介绍文字，右边即时预览 → 改营业时间 → 保存 → 新增地区</span></div></figure></div>
   <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-courses.jpg" data-anim="ux/admin-courses.webp" alt="UI · 课程管理与教练资料" loading="lazy"><div class="shot-cap"><b>UI · 课程管理与教练资料</b><span>搜寻课程 → 编辑 → 教练资料</span></div></figure></div>
+  <div class="clips"><figure class="shot clip"><img src="ux/poster/admin-promos.jpg" data-anim="ux/admin-promos.webp" alt="UI · 平台优惠码" loading="lazy"><div class="shot-cap"><b>UI · 平台优惠码</b><span>新增 → 产生代码（乱码解码）→ 改成固定金额，预览数字滚动 → 指定教练 → 保存</span></div></figure></div>
 </section>
 
 <!-- 11 -->
@@ -759,8 +740,6 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="ch-head"><div class="eyebrow">Section 12 / UI &amp; UX</div><h2>UI and UX<small>界面与交互展示（Phase 1 原型，25 Oct 2026）</small></h2></div>
   <p class="prose">首页和课程页参考 Rimowa：大图、细字、留白、少颜色。登录后的后台参考 360Player：左侧导航、清楚的表格和状态标签，颜色按意思使用（绿色确认、红色删除或放弃、橙色主要行动）。所有页面用同一套交互：换页淡入、列表依次出现、按钮有统一的转圈 → 对勾反馈、不能按的按钮一律变灰；系统开启“减少动态效果”时这些动画会自动关掉。以下动图都是从原型直接录下来的；照片与人名为样本。</p>
   <div class="ux-grid">
-    <figure class="shot clip"><img src="ux/poster/theme.jpg" data-anim="ux/theme.webp" alt="UX · 亮 / 暗模式切换" loading="lazy"><div class="shot-cap"><b>UX · 亮 / 暗模式切换</b><span>按右上角的太阳 / 月亮：新的配色从按钮处以圆形展开，盖满整页</span></div></figure>
-    <figure class="shot clip"><img src="ux/poster/language.jpg" data-anim="ux/language.webp" alt="UX · 中英文切换" loading="lazy"><div class="shot-cap"><b>UX · 中英文切换</b><span>按 EN / 中文：画面先轻轻模糊，换成另一种语言后再对焦清楚</span></div></figure>
     <figure class="shot clip"><img src="ux/poster/header-fold.jpg" data-anim="ux/header-fold.webp" alt="UX · 首页顶栏折叠" loading="lazy"><div class="shot-cap"><b>UX · 首页顶栏折叠</b><span>往下滚动，两边的连结滑向中间，ATHLO 转一圈缩成小药丸；点一下展开，再点一下回到顶部</span></div></figure>
     <figure class="shot clip phone"><img src="ux/poster/phone-menu.jpg" data-anim="ux/phone-menu.webp" alt="UX · 手机菜单" loading="lazy"><div class="shot-cap"><b>UX · 手机菜单</b><span>手机上左上角的菜单按钮：所有页面连结、语言和亮暗切换从左边滑出</span></div></figure>
   </div>
@@ -773,6 +752,12 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
     <tr><td>草稿保存栏</td><td>首页广告</td><td>改动先当草稿；有改动才出现红色“放弃更改”，绿色“保存”从灰色变成可按</td></tr>
     <tr><td>转圈 → 对勾</td><td>所有保存 / 提交按钮</td><td>处理中转圈，成功变对勾弹一下再淡出</td></tr>
     <tr><td>拖放上传</td><td>所有上传图片的地方</td><td>照片可以直接从电脑拖进来</td></tr>
+    <tr><td>首页卡片依次出现</td><td>所有首页</td><td>卡片一张接一张浮上来，不是一次全部跳出</td></tr>
+    <tr><td>数字滚动</td><td>剩余课时、本月出勤、优惠码预览</td><td>数字从旧值滚到新值</td></tr>
+    <tr><td>环形图描线</td><td>剩余课时</td><td>圆环从 0 画到目前的比例</td></tr>
+    <tr><td>未读脉冲</td><td>通知、签到按钮</td><td>未读通知的蓝点和底色轻轻呼吸；有课快开始时签到按钮外圈脉动</td></tr>
+    <tr><td>切换孩子</td><td>家长首页</td><td>内容往左或往右滑开，新的滑进来（淡入淡出），不会硬切</td></tr>
+    <tr><td>乱码解码 · 滑动切换 · 摇头</td><td>平台优惠码</td><td>产生代码时字母乱跳后定格；% / RM 底色滑过去；数值不对时输入框左右摇一下</td></tr>
   </table></div>
 </section>
 
@@ -780,7 +765,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
 <section class="ch" id="phases">
   <div class="ch-head"><div class="eyebrow">Section 13 / Phases</div><h2>Development phases<small>开发阶段</small></h2></div>
   <div class="phases">
-    <div class="phase cur"><h4>Phase 1 · 本次报价</h4><div class="sub">个人教练：报名、签到与课时</div><ul><li>公开首页（广告横幅）、课程总览、课程介绍、关于 / 联系我们</li><li>注册登录、家长与孩子</li><li>报名课程（自动成为该教练学员）</li><li>教练汇入原有学员、邀请链接</li><li>教练后台：课程、排期、人数上限</li><li>签到码扫描、手动签到、Walk-in、迟到</li><li>套票（公开 / 学员专属 / 隐藏）</li><li>Promo code 优惠码</li><li>支付网关付款（FPX / 卡 / 电子钱包）</li><li>课时记录、收据</li><li>课时不足提醒：App 内、Email、WhatsApp 手动</li><li>基本报表与导出</li><li>平台 Admin：教练审核、课程与网站内容管理</li><li>English / 中文</li></ul></div>
+    <div class="phase cur"><h4>Phase 1 · 本次报价</h4><div class="sub">个人教练：报名、签到与课时</div><ul><li>公开首页（广告横幅）、课程总览、课程介绍、关于 / 联系我们</li><li>注册登录、家长与孩子</li><li>家长 / 学生 / 教练首页：签到、通知、下一堂课、剩余课时</li><li>报名课程（自动成为该教练学员）</li><li>教练汇入原有学员、邀请链接</li><li>教练后台：课程、排期、人数上限</li><li>签到码扫描、手动签到、Walk-in、迟到</li><li>套票（公开 / 学员专属 / 隐藏）</li><li>Promo code 优惠码（教练）、平台优惠码（管理员）</li><li>支付网关付款（FPX / 卡 / 电子钱包）</li><li>课时记录、收据</li><li>课时不足提醒：App 内、Email、WhatsApp 手动</li><li>基本报表与导出</li><li>平台 Admin：教练审核、课程与网站内容管理</li><li>English / 中文</li></ul></div>
     <div class="phase"><h4>Phase 2</h4><div class="sub">团体 / 学院，与更多弹性</div><ul><li><b>团体 / 学院后台</b>：一间学院多位教练（见 <a class="xref" href="#p2-academy">第 14 章 · 学院后台</a>）</li><li><b>学院首页、学院 logo 展示</b></li><li><b>Academy code 加入学院</b></li><li><b>会员特殊价、指定会员套票</b></li><li><b>学院收款与结款调整</b></li><li>支付公司自动分帐（做法 C）</li><li>WhatsApp 自动发送（API）、Push 通知</li><li>教练评价与成长档案、Measurements</li><li>Google Calendar 订阅</li><li>Tournament 比赛管理</li><li>Bahasa Melayu</li></ul></div>
     <div class="phase"><h4>Phase 3</h4><div class="sub">平台扩展</div><ul><li>Marketplace 商城</li><li>订阅方案自动收费</li><li>进阶分析报表</li><li>Google Sheets 同步</li></ul></div>
   </div>
@@ -791,13 +776,13 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="ch-head"><div class="eyebrow">Section 14 / Phase 2 explained</div><h2>Groups and academies<small>第二阶段说明：团体 / 学院与相关功能</small></h2></div>
   <p class="prose">Phase 1 只服务个人教练。Phase 2 开放<b>团体 / 学院</b>：一间学院底下有多位教练，由学院管理员统一管理。下面五项都是学院加入后才需要的功能。</p>
 
-  <div class="part" id="p2-academy"><span>13A</span><h3>Academy workspace / 学院后台</h3></div>
+  <div class="part" id="p2-academy"><span>14A</span><h3>Academy workspace / 学院后台</h3></div>
   <p class="prose"><b>一句话：</b>学院就像一个“教练团队”。学院管理员可以管理底下所有教练的课程、学员、套票和付款；每位教练仍然只看到自己负责的课。</p>
   <div class="ex">
     <div class="exc"><div class="q">Example · 教练组成学院</div><h4>Daniel 和 Aina 成立 1 Percent Sports Academy</h4><p>两位原本是个人教练，后来一起成立学院，并请 Ravi 担任管理员。</p><div class="a">Ravi 在学院后台看到两位教练的所有课程和学员，统一设定套票与价格；Daniel 和 Aina 照常为自己的课签到。原本的学员和课时会一起转到学院底下。</div></div>
     <div class="exc"><div class="q">Roles · 学院内的身份</div><h4>学院管理员 / 教练 / 学员</h4><p>学院管理员：管理学院资料、教练帐号、全部课程与付款、报表。<br>教练：只管自己负责的课堂与签到。<br>学员与家长：和 Phase 1 一样。</p></div>
   </div>
-  <div class="part" id="p2-code"><span>13B</span><h3>Academy code / 学院 code</h3></div>
+  <div class="part" id="p2-code"><span>14B</span><h3>Academy code / 学院 code</h3></div>
   <p class="prose"><b>一句话：</b>academy code 就像 WhatsApp 群组的邀请码。学院把 6 位 code（或扫码海报）给家长，家长输入后就直接进入学院，不需要先去找课、报名。</p>
   <div class="ex">
     <div class="exc"><div class="q">Example 1 · 新开班的球队</div><h4>只给入选者的校队</h4><p>1 Percent 办了 U15 校队 tryout，选出 18 人。这个班不对外开放，课程页上看不到。</p><div class="a">Ravi 在 WhatsApp 群组发 code <b>U15T26</b>，18 位家长输入后，孩子直接进入校队名单。</div></div>
@@ -820,7 +805,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   </table></div>
   <figure class="shot"><img src="img/06-join-academy-mobile.jpg" width="1600" height="1000" alt="Phase 2: enter academy code, choose role, add children" loading="lazy"><div class="shot-cap"><b>设计稿 · Phase 2 · Join with code 用 code 加入学院</b><span>输入 code → 选择身份 → 加入孩子</span></div></figure>
 
-  <div class="part" id="p2-special"><span>13C</span><h3>Member special price / 会员特殊价</h3></div>
+  <div class="part" id="p2-special"><span>14C</span><h3>Member special price / 会员特殊价</h3></div>
   <p class="prose"><b>一句话：</b>学院可以给某一位学员一个专属价格，只有这位学员看得到。它和优惠码不同：优惠码是谁拿到谁可以用；特殊价是绑在指定学员身上，学员不用输入任何东西。</p>
   <div class="ex">
     <div class="exc"><div class="q">Example 1 · 兄弟姐妹</div><h4>两个孩子一起报名</h4><p>Sarah 的 Chloe 和 Ethan 都在 1 Percent 上课。</p><div class="a">Ravi 给 Chloe 设定 12 堂 <b>RM 420</b>（原价 RM 480）。Sarah 打开购买页时，Chloe 的套票直接显示 RM 420。</div></div>
@@ -838,7 +823,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <figure class="shot"><img src="img/13-p2-special-price-mobile.jpg" width="1600" height="1000" alt="Phase 2: parent sees special price for Chloe" loading="lazy"><div class="shot-cap"><b>设计稿 · Phase 2 · Special price on phone 家长看到专属价</b><span>购买页最上方显示“For Chloe”的专属价</span></div></figure>
   <figure class="shot"><img src="img/14-p2-special-price-admin.jpg" width="1600" height="1000" alt="Phase 2: admin sets special price for a member" loading="lazy"><div class="shot-cap"><b>设计稿 · Phase 2 · Admin sets special price 设定会员特殊价</b><span>指定会员、套票、价格、有效期、原因（只有职员看得到）</span></div></figure>
 
-  <div class="part" id="p2-pages"><span>13D</span><h3>Academy pages and logo showcase / 学院首页与 logo 展示</h3></div>
+  <div class="part" id="p2-pages"><span>14D</span><h3>Academy pages and logo showcase / 学院首页与 logo 展示</h3></div>
   <p class="prose"><b>一句话：</b>当平台上有多间学院时，每间学院有自己的公开首页，平台首页也会用一条自动流动的 logo 带展示所有合作学院。Phase 1 先专注个人教练的课程，家长从课程页就能看到是哪位教练开的课。</p>
   <div class="ex">
     <div class="exc"><div class="q">Example 1 · 学院首页</div><h4>家长想先认识学院</h4><p>Sarah 在课程页看到 1 Percent 开的课，想知道这间学院可不可靠。</p><div class="a">点进 1 Percent 的学院首页：封面照片、logo、简介、教练、上课地点、所有开放的课程，还有 WhatsApp 按钮。</div></div>
@@ -855,7 +840,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <figure class="shot"><img src="img/15-p2-academy-home.jpg" width="1600" height="1122" alt="Phase 2: academy home page" loading="lazy"><div class="shot-cap"><b>设计稿 · Phase 2 · Academy home 学院首页</b><span>封面 · logo · 简介 · 教练 · 开放课程 · WhatsApp</span></div></figure>
   <figure class="shot"><img src="img/16-p2-logo-marquee.jpg" width="1600" height="440" alt="Phase 2: academy logo showcase on landing page" loading="lazy"><div class="shot-cap"><b>设计稿 · Phase 2 · Logo showcase 学院 logo 流动带</b><span>平台首页，自动横向流动，鼠标移上去暂停</span></div></figure>
 
-  <div class="part" id="p2-pay"><span>13E</span><h3>Payments with academies / 学院加入后的收款</h3></div>
+  <div class="part" id="p2-pay"><span>14E</span><h3>Payments with academies / 学院加入后的收款</h3></div>
   <p class="prose">学院加入后，收款对象从“个人教练”变成“教练或学院”。<a class="xref" href="#pay-modes">第 06 章 · 收款方式</a>的三种收款方式同样适用，差别在于结款给谁：</p>
   <div class="tbl"><table>
     <tr><th>Phase 1 选择</th><th>Phase 2 学院加入后</th></tr>
@@ -870,7 +855,7 @@ h3:target, .part:target, .tier:target, .tbl:target, .exc:target, .cf:target { an
   <div class="ch-head"><div class="eyebrow">Section 15 / Client confirmation</div><h2>Items to confirm<small>待客户确认事项（影响开发范围与报价）</small></h2></div>
   <p class="prose">只列出会影响开发范围、报价或法律责任的主要问题。报名、优惠码、Walk-in、课时提醒、通知管道、语言等细节，原型已按建议做好，可以在设定里调整，不再另外列出。</p>
   <div class="confirm">
-    <div class="cf" id="q01"><div class="n">01</div><h4>收款方式：钱收进谁的户口</h4><p>A 直接付给教练 / B 平台统一收款、定期结款 / C 支付公司自动分帐（Phase 2）。B 由平台代收第三方款项，上线前需咨询 Bank Negara 相关规定。</p><div class="rec">B：原型已按 Payment Gateway 统一收款、每周或每月结款做好</div><div class="see"><a class="xref" href="#pay-modes">相关说明 · 收款方式比较</a></div><div class="line">确认：____________</div></div>
+    <div class="cf" id="q01"><div class="n">01</div><h4>收款方式：钱收进谁的户口</h4><p>已确定使用支付网关 API。待确认：B 平台统一收款、定期结款，还是 C 支付公司自动分帐（Phase 2）；B 由平台代收第三方款项，上线前需咨询 Bank Negara 规定。优惠码的折扣：平台建立的由平台承担，教练建立的由教练承担。</p><div class="rec">B：原型已按 Payment Gateway 统一收款、每周或每月结款做好</div><div class="see"><a class="xref" href="#pay-modes">相关说明 · 收款方式比较</a></div><div class="line">确认：____________</div></div>
     <div class="cf" id="q02"><div class="n">02</div><h4>平台收费模式</h4><p>1 只收月费（教练拿全额）/ 2 只按交易抽成 / 3 月费 + 较低抽成</p><div class="rec">Phase 1 先用 1 只收月费，之后再评估抽成</div><div class="see"><a class="xref" href="#fee-model">相关说明 · 平台收费模式与例子</a></div><div class="line">确认：____________</div></div>
     <div class="cf" id="q03"><div class="n">03</div><h4>签到与扣课规则</h4><p>什么时候扣课；余额为 0 能否签到；缺席是否扣课；开课后几分钟算迟到。</p><div class="rec">签到当下扣；余额 0 可签到但标红记欠课；缺席扣不扣由教练设定；迟到预设 10 分钟</div><div class="see"><a class="xref" href="#checkin-rules">相关说明 · 签到规则</a></div><div class="line">确认：____________</div></div>
     <div class="cf" id="q04"><div class="n">04</div><h4>教练审核</h4><p>不审核 / 审核身份 / 审核身份与教练证书</p><div class="rec">审核身份与教练证书</div><div class="see"><a class="xref" href="#roles">相关说明 · 三种身份</a></div><div class="line">确认：____________</div></div>
