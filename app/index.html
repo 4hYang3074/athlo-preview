@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Athlo</title>
+    <script>
+      // Light / dark before the first paint (ThemeToggle stores the choice under this key).
+      try {
+        if (localStorage.getItem('athlo-theme') === 'dark') document.documentElement.classList.add('dark');
+      } catch (_) {}
+    </script>
+    <script>
+      // Boot diagnostics (plain script, runs even when the app bundle cannot load). Instead of a
+      // blank page, explain why the app did not start:
+      // - this file opened from a plain static server / file:// (it is Vite *source*; /src/main.tsx
+      //   only works through `vite` dev or the built `dist/` via `vite preview`);
+      // - the entry script failed to load or threw before mounting.
+      (function () {
+        var errors = [];
+        var HOWTO =
+          'Run "pnpm --filter web dev" and open http://localhost:5173/ , or "pnpm --filter web build" then "pnpm --filter web preview" and open http://localhost:4173/ .';
+
+        function show(reason) {
+          var root = document.getElementById('root');
+          if (!root || root.dataset.mounted === 'true' || root.querySelector('[data-testid="boot-failure"]')) return;
+          var box = document.createElement('div');
+          box.setAttribute('role', 'alert');
+          box.setAttribute('data-testid', 'boot-failure');
+          box.style.cssText = 'max-width:40rem;margin:4rem auto;padding:0 1rem;font-family:system-ui,sans-serif;color:#111';
+          var title = document.createElement('h1');
+          title.textContent = 'Athlo could not start';
+          var detail = document.createElement('pre');
+          detail.style.cssText = 'white-space:pre-wrap;background:#f5f5f4;padding:1rem;border-radius:.75rem';
+          detail.textContent = [reason, HOWTO].concat(errors).join('\n\n');
+          box.append(title, detail);
+          root.replaceChildren(box);
+        }
+
+        window.addEventListener(
+          'error',
+          function (event) {
+            var target = event.target;
+            if (target && target !== window && target.tagName === 'SCRIPT') {
+              errors.push('Failed to load ' + target.src);
+              show('The app script could not be loaded.');
+            } else {
+              errors.push((event.error && event.error.message) || event.message);
+            }
+          },
+          true,
+        );
+        window.addEventListener('unhandledrejection', function (event) {
+          errors.push(String(event.reason));
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+          var sourceEntry = document.querySelector('script[type="module"][src^="/src/"]');
+          var viteClient = document.querySelector('script[src="/@vite/client"]');
+          if (location.protocol === 'file:') {
+            show('This page was opened as a local file.');
+          } else if (sourceEntry && !viteClient) {
+            show('This is the un-built source page served without Vite (browsers cannot run /src/main.tsx directly).');
+          }
+        });
+
+        setTimeout(function () {
+          show('The app did not finish starting.');
+        }, 6000);
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-iFS8Khv3.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D96PwK7b.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Athlo needs JavaScript enabled.</noscript>
+  </body>
+</html>
